@@ -1,0 +1,59 @@
+.RadioGroup .MuiFormControlLabel-label {
+  display: flex;
+  line-height: 36px;
+  font-size: 14px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.RadioGroup img{
+  transition: .3s;
+}
+.RadioGroup .MuiRadio-root{
+  height: 22px;
+  width: 22px;
+  box-shadow: 0px 0px 0px 2px #DFDEE2 inset;
+  background: url(../../assets/icons/check.svg) center/0px no-repeat;
+  margin-right: 13px;
+  transition: .3s;
+}
+.RadioGroup .MuiRadio-root.Mui-checked{
+  background-size:12px;
+  box-shadow: 0px 0px 0px 2px var(--primary);
+}
+.RadioGroup label{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+
+
+.MuiInputBase-input {
+  width: calc(100% - 36px);
+  padding: 12px 16px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #A8A8A8;
+  border: 2px solid #E0E0E0;
+}
+.MuiTypography-root, .MuiTypography-root > *{
+  font-family: unset !important;
+}
+
+button.MuiButtonBase-root{
+  border: none;
+  background: var(--primary);
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #FFF;
+  padding: 5px 12px;
+  text-transform: unset;
+}
+button.MuiButtonBase-root:hover{
+  background: var(--primary);
+}

@@ -1,0 +1,46 @@
+.ProductGrid {
+  min-height: 100px;
+  background: #FFF;
+  margin-top: 16px;
+  border-radius: 2px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: 125px 125px 125px 125px;
+  grid-template-rows: 227px;
+  justify-content: space-around;
+}
+.ProductCard {
+  width: 125px;
+  height: 227px;
+  display: flex;
+  flex-direction: column;
+}
+.ProductCard .Price{
+  margin-top: 8px;
+}
+.ProductCard .image{
+  height: 92px;
+  width: 92px;
+  background: #C4C4C4 center/92px;
+  border: 16px solid #FEFEFE;;
+  box-shadow: 0 0 0 1px #F3F0FE;
+  border-radius: 12px;
+}
+.ProductCard .title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #191919;
+  margin-bottom: 8px;
+  height: 41px;
+
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+

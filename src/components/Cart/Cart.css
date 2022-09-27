@@ -1,0 +1,103 @@
+
+.Cart.Popup.active {
+  top: 117px;
+  opacity: 1;
+}
+.Cart.Popup {
+  width: 248px;
+  min-height: 300px;
+  position: fixed;
+  top: -400px;
+  background: #FFF;
+  border: 9px solid var(--primary);
+  transition: .1s opacity ease-out;
+  z-index: 0;
+  opacity: 0;
+  padding: 16px;
+  max-height: calc(100vh - 212px);
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-button {
+  padding: 24px !important;
+  background: #1395bd !important;
+  height: calc(100% + 1px);
+  border-radius: 0 !important;
+  transition: .3s;
+}
+.cart-button.active {
+  background: #147594 !important;
+}
+.cart-button .Price {
+  color: #FFF;
+  margin-left:8px;
+}
+.Cart.Popup .Price.total-price {
+  padding: 14px 24px;
+  border: 2px var(--primary) solid;
+  border-radius: 2px;
+  margin-top: 16px;
+}
+.Cart > .line {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: -4px -14px 16px 0px #fff;
+  position: relative;
+  border-top: 1px #F4F4F4 solid;
+}
+
+.CartItemList{
+  padding: 0 !important;
+  margin: 0 !important;
+  max-height: calc(100vh - 280px);
+  overflow: auto;
+  min-height: 232px;
+}
+
+
+.CartItem {
+  padding: 16px 8px;
+  border-bottom: 1px #F4F4F4 solid;
+  display: flex;
+}
+.CartItem:last-child {
+  border: none;
+}
+.CartItem .left {
+  width: 100%;
+}
+.CartItem .title {
+  line-height: 18px;
+  font-size: 14px;;
+  color: #191919;
+}
+.CartItem .Price {
+  line-height: 19px;
+}
+.CartItem .Count {
+  height: 32px;
+  border: none;
+}
+.CartItem .Count .value {
+  width: auto;
+  margin: 0 8px;
+  height: 32px;
+}
+
+
+
+.EmptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #444;
+  width: 100%;
+  user-select: none;
+  margin-bottom: 20px;
+}
+.EmptyCart img {
+  width: 90%;
+  margin: 24px auto;
+}
