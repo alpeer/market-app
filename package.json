@@ -45,6 +45,7 @@
     "mock-server": "json-server --watch api/mock/db.json -c config/json-server.json",
     "test": "cypress run --component",
     "test:e2e": "cypress run",
+    "test:gui": "cypress open",
     "storybook": "start-storybook -p 3002 -s public -c config/.storybook"
   },
   "eslintConfig": {

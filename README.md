@@ -1,7 +1,8 @@
 # Market App
 
-This application has been created as an assignment for internship purpose.
+[![Test](https://github.com/alpeer/market-app/actions/workflows/test.yml/badge.svg)](https://github.com/alpeer/market-app/actions/workflows/test.yml)
 
+This application has been created as an assignment for internship purpose.
 
 ## Features
 - Cart Management
@@ -81,8 +82,18 @@ npm run build:docs
 npm run build:storybook
 ```
 
-## Deployment
+## Deployment (deliverables)
+### Market Progressive Web App
+Project app has been deployed on [Vercel](https://market-app-x6dr.vercel.app/)
 
-Project has been deployed on [Vercel](https://market-app-x6dr.vercel.app/)
-
+### API Service
 API service of mock data is available thanks to [Vercel Functions](https://market-app-x6dr.vercel.app/api/items)
+
+### Component Showcase
+- Storybook for component inspection has been deployed on [Vercel](https://market-app-x6dr-h72lkgc5e-alper.vercel.app/docs/)
+- You can manually test components and see code examples at this page.
+
+### Type Documentation
+- JSDoc has been used as documentation tool.
+- Inline prop definitions are available on component code(.jsx) files
+- Output has published on [Vercel](https://market-app-x6dr-h72lkgc5e-alper.vercel.app/definitions/global.html)
