@@ -3,14 +3,14 @@ import { useEffect } from "react"
 import { connect, useDispatch } from "react-redux"
 import { fetchBrands, fetchProducts } from "../../app"
 import { Section } from "../../components"
-import { Connected } from "./ConnectedComponents"
+import { Connected } from "./helpers/ConnectedComponents"
 
 const Products = ({brandStatus}) => {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(fetchBrands()) }, [])
   useEffect(() => {
     brandStatus === "loaded" && dispatch(fetchProducts())
-  }, [brandStatus])
+  }, [brandStatus]) 
 
   return <div className="Products Page">
     <div className="left">

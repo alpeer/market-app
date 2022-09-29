@@ -10,14 +10,14 @@ import "./Price.css"
  * @description Price
  * @param {IPriceProps}
  */
-export const Price = ({ className, value }) => {
+export const Price = ({ className, value, ...props }) => {
   const formattedValue = useMemo(() =>
     !value && value !== 0
       ? ""
       : currencyFormatter.format(value)
     , [value])
 
-  return <div className={classNames("Price", className)}>
+  return <div className={classNames("Price", className)} {...props}>
     {formattedValue}
   </div>
 }

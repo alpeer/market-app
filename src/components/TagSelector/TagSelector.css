@@ -7,7 +7,7 @@
   border: none;
   color: #FFF;
   background: #F2F0FD !important;
-  color: #1EA4CE !important;
+  color: var(--primary,#1EA4CE) !important;
   cursor: pointer;
   transition: .3s;
   
@@ -15,8 +15,8 @@
 .Tag:hover {
   background: #e4e3e8;
 }
-.Tag.selected,.Tag.selected:hover {
-  background: #1EA4CE !important;
+.Tag.selected, .Tag.selected:hover {
+  background: var(--primary,#1EA4CE) !important;
   color: #F2F0FD !important;
 }
 

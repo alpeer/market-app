@@ -1,46 +1,87 @@
-# Getting Started with Create React App and Redux
+# Market App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This application has been created as an assignment for internship purpose.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
+- Cart Management
+- Cart State on Session Storage
+- Pagination
+- Sorting
+- Filtering
+- Fuzzy Logic & Intuitive UI
+- Responsible design
+## Stack
+- React 18
+- React Redux
+- StoryBook (for manual tests)
+- Cypress (for unit/integration tests)
+- JSDoc (for documentation)
+## Development
 
-### `npm start`
+You can install and run dev environment by executing following commands
+```bash
+npm install
+npm start
+```
+### Mock data
+Mock files(`items.json`, `companies.json`) are stored under [api/mock](https://github.com/alpeer/market-app/tree/master/api/mock) folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can run [json-server](https://github.com/typicode/json-server) via following command
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run mock-server
+```
 
-### `npm test`
+### Folder Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [app](https://github.com/alpeer/market-app/tree/master/src/app) folder has backbone of application, main layout, store and reducers are here. react router should also implemented here in the future.
+- [components](https://github.com/alpeer/market-app/tree/master/src/components) folder has UI components separated by folder with their names. These folders contain styles, stories, unit tests for each component.
+- [pages](https://github.com/alpeer/market-app/tree/master/src/pages) folder seems unnecessary for now since we have only one page. Nevertheless we may have new pages in the future.
+- [pages](https://github.com/alpeer/market-app/tree/master/src/pages) folder seems unnecessary for now since we have only one page. Nevertheless we may have new pages in the future.
+- [utils](https://github.com/alpeer/market-app/tree/master/src/utils) folder should have generic utils that can be used project-wide.
+## Tests
+### Manuel Tests
 
-### `npm run build`
+You can inspect components and test manually by using storybook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Runs Storybook
+npm run storybook
+```
+### Unit Tests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Unit tests are under the folder of related component {See example: [components/SearchableFilter](https://github.com/alpeer/market-app/tree/master/src/components/SearchableFilter.cy.js) }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run unit tests simply run
+```bash
+npm test
+```
 
-### `npm run eject`
+### Integration Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Integration tests are under [cypress/e2e](https://github.com/alpeer/market-app/tree/master/cypress/e2e/ProductsPage) folder and covers following requirements:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Pagination
+- Product sorting, filtering(item type, brands, tags) 
+- Cart Management (both at Product List and Cart)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run test:e2e
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Building
 
-## Learn More
+Project should be builded by running the following commands:
+```bash
+npm run ci
+npm run build
+npm run build:docs
+npm run build:storybook
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project has been deployed on [Vercel](https://market-app-x6dr.vercel.app/)
+
+API service of mock data is available thanks to [Vercel Functions](https://market-app-x6dr.vercel.app/api/items)

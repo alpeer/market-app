@@ -3,5 +3,5 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: var(--primary);
+  color: var(--primary,#1EA4CE);
 }

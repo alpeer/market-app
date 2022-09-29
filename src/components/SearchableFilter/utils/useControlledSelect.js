@@ -1,23 +1,28 @@
 /**
  * @typedef TUseSelect
- * @prop {(id: TItemKey) => boolean} isSelected
- * @prop {() => void} reset Resets selection state
- * @prop {(id: TItemKey) => (newValue: boolean) => void} onSelectionStatusChange Callback to be called when items selection status changed
+ * @callback isSelected
+ * @callback reset Resets selection state
+ * @callback onSelectionStatusChange Callback to be called when items selection status changed
  * 
  * @param {TItemKey[]} selectedItems Current selection state
  * @callback onChange 
- * @returns {{isSelected: (id)=>boolean}}
+ * @returns {{
+ *    isSelected: (id: TItemKey) => boolean
+ *    reset: () => void
+ *    onSelectionStatusChange: {(id: TItemKey) => (newValue: boolean) => void
+ * }}
  */
 
-export const useControlledSelect = (selectedItems, onChange) => {
+export const useControlledSelect = (selectedItems, onChange, totalItems) => {
   const isSelected = (id) => selectedItems.indexOf(id) !== -1
   const reset = () => onChange([])
   const onSelectionStatusChange = (id) => (newValue) => {
-    const selected = new Set(selectedItems)
+    let selected = new Set(selectedItems)
     newValue
       ? selected.add(id)
       : selected.delete(id)
-    onChange(Array.from(selected))
+    selected = Array.from(selected)
+    onChange(totalItems === selected.length ? [] : selected)
   }
   return { isSelected, reset, onSelectionStatusChange }
 }

@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import Pagination from "@mui/material/Pagination"
-import { ProductGrid, RadioGroup, SearchableFilter, TagSelector } from "../../components"
+import { ProductGrid, RadioGroup, SearchableFilter, TagSelector } from "../../../components"
 import { productSortOptionsForRadio } from "./ProductSortOptions"
 
 const gridStateDispatch = (field) => ({

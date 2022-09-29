@@ -1,8 +1,8 @@
 import Checkbox from "@mui/material/Checkbox"
 import FormControlLabel from "@mui/material/FormControlLabel"
-import { Icon } from ".."
+import { Icon } from "../.."
 
-export const FilterListItem = ({isSelected, name, onChange, count, style}) =>
+export const FilterListItem = ({isSelected, name, onChange, count=0, style}) =>
   <FormControlLabel
     className="FilterListItem"
     style={style}

@@ -1,16 +1,16 @@
+import classNames from "classnames"
 import { useMemo } from "react"
 import { IconButton } from ".."
 import "./Count.css"
 /**
- * @typedef ICountProps
- * @prop {string} name Name of element to be added/removed (for tooltip)
- * @prop {number} value Current value
- * @prop {function} onChange Callback
- * 
  * @component Count
+ * @typedef {Object} ICountProps
+ * @property {string} name Name of element to be added/removed (for tooltip)
+ * @property {number} value Current value
+ * @callback onChange Callback
  * @param {ICountProps}
  */
-export const Count = ({name, value=0, onChange}) => {
+export const Count = ({name, value=0, onChange, className, ...containerProps}) => {
   const { increment, decrement, removeIcon } = useMemo(() => ({
       increment: () => onChange(value + 1),
       decrement: () => value > 0 && onChange(value - 1),
@@ -21,7 +21,7 @@ export const Count = ({name, value=0, onChange}) => {
     }), [value])
 
   
-  return <div className="Count">
+  return <div className={classNames("Count", className)} {...containerProps}>
     {value > 0 && <>
       <IconButton icon={removeIcon} size={12} alt={`Remove "${name}"`} onClick={decrement} />
       <div className="value"> {value} </div>

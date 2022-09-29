@@ -3,22 +3,32 @@ import classNames from "classnames"
 import Button from "@mui/material/Button"
 import List from "@mui/material/List"
 import { Icon, Price } from ".."
-import { CartItem } from "./CartItem"
-import { EmptyCart } from "./EmptyCart"
+import { CartItem } from "./helpers/CartItem"
+import { EmptyCart } from "./helpers/EmptyCart"
 import "./Cart.css"
 /**
- * @component
- * @example 
- * <Cart 
+ * @component Cart
+ * @example
+ * <Cart
  *   totalCost={100} 
  *   items={{"item-slug": {id:"item-slug", name:"Item", price: 20.11}}}
  *   onCountChange={(item) => (count) => doSomething({...item,count})}
  * />
- *   
- * @param {number} totalCost Total cost of basket 
- * @param {{[key:slug]:IItem}} items Items in basket 
- * @callback onCountChange Total cost of basket 
- * @returns {JSX.Element}
+ * @typedef {Object} ICartItem 
+ * @property {string|number} id
+ * @property {string} name
+ * @property {number} price
+ * @property {number} count
+ * 
+ * @typedef {Object.<string|number, ICartItem>} ICartItems
+
+ * 
+ * @typedef {Object} ICartProps
+ * @property {number} totalCost
+ * @property {TCartItems} items
+ * 
+ * @param {ICartProps}
+
  */
 
 export const Cart = ({totalCost, items = {}, onCountChange}) => {

@@ -9,5 +9,5 @@ import Remove from "../../assets/icons/remove.svg"
 
 const icons = {ArrowRight, Cart, Check, Plus, Minus, Check2, Cross, Remove}
 
-export const Icon = ({ icon, size = 24 }) =>
-  <img src={icons[icon] || undefined} height={size} width={size} alt={icon + " icon"} />
+export const Icon = ({ icon, size = 24, ...props }) =>
+  <img src={icons[icon] || undefined} height={size} width={size} alt={icon + " icon"} {...props} />

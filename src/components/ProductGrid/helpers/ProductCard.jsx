@@ -1,12 +1,12 @@
 import  Button from "@mui/material/Button"
-import { Count, Price } from ".."
-import { config } from "../../utils"
+import { Count, Price } from "../.."
+import { config } from "../../../utils"
 import { productCardConnector } from "./productCardConnector"
 
-const ProductCard = ({ img=config.UI.productImagePlaceholder, price, name, slug, count = 0, onCountChange }) => {
+const ProductCard = ({ img=config.UI.productImagePlaceholder, price, type, tags, name, slug, count = 0, onCountChange }) => {
   const add = () => onCountChange(1)
 
-  return <div className="ProductCard">
+  return <div className="ProductCard" datatags={tags} datatype={type}>
     <div className="image" style={{backgroundImage:`url(${img})`}}></div>
     <Price value={price} />
     <div className="title"> {name} </div>

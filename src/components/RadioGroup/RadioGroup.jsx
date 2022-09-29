@@ -16,18 +16,27 @@ import "./RadioGroup.css"
  * @prop {number} onChange Callback
  * 
  * @component RadioGroup
+ * @description Encapsulates Mui Radio Group component, doesn't need unit test
  * @param {IRadioGroupProps}
  */
-export const RadioGroup = ({ options=[], value, onChange }) =>
+export const RadioGroup = ({ options=[], value, name, onChange }) =>
   <FormControl>
     <MuiRadioGroup
       className="RadioGroup"
-      aria-labelledby="radio-group"
+      aria-labelledby={name + "-radio-group"}
       value={value}
       onChange={onInputValueChange(onChange)}
-      name="radio-buttons-group"
+      name={name}
     >
       {options.map(({ id, label }) =>
-        <FormControlLabel key={id} value={id} control={<Radio checkedIcon={<Icon icon="Check" size={10} />} icon={<Icon icon="Check" size={0} />} />} label={label} />)}
+        <FormControlLabel
+          key={id}
+          value={id}
+          control={
+            <Radio
+              checkedIcon={<Icon icon="Check" size={10} />}
+              icon={<Icon icon="Check" size={0} />} />
+          }
+          label={label} />)}
     </MuiRadioGroup>
   </FormControl>

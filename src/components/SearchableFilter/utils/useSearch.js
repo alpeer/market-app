@@ -3,10 +3,13 @@ import { useEffect, useState, useMemo } from "react"
 import Fuse from "fuse.js"
 
 /**
+ * @typedef {Object} IData
+ * @template {keyof IData} TDataColumn
+ * @property {string|number} [index]
  * @description This hook fuzzy searches given tabular data.
  * 
  * @param {IData[]} data Tabular data to be searched
- * @param {(keyof IData)[]} columns Columns of data to be searched
+ * @param {TDataColumn[]} columns Columns of data to be searched
  * @param {string} query Search query
  * @returns results
  */

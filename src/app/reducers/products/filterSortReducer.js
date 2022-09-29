@@ -1,4 +1,4 @@
-import { ProductSortOptions } from "../../../pages/Products/ProductSortOptions";
+import { ProductSortOptions } from "../../../pages/Products/helpers/ProductSortOptions";
 import { getPagination } from "./paginationReducer";
 
 export default (state, { payload: { field, value } }) => {

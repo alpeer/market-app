@@ -1,4 +1,4 @@
-import emptyCart from "../../assets/undraw_empty_cart_co35.svg"
+import emptyCart from "../../../assets/undraw_empty_cart_co35.svg"
 
 export const EmptyCart = () => 
   <div className="EmptyCart">

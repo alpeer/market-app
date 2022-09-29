@@ -17,8 +17,10 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.8",
     "react-tooltip": "^4.2.21",
     "react-virtualized": "^9.22.3",
+    "use-connection": "^1.0.2",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.4",
     "workbox-broadcast-update": "^6.5.4",
@@ -36,12 +38,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "docs": "jsdoc -c jsdoc.conf.json",
-    "mock-server": "json-server --watch api/mock/db.json",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build:docs": "jsdoc -c config/jsdoc.conf.json -d build/definitions",
+    "build:storybook": "build-storybook -s public -c config/.storybook -o build/docs",
+    "serve": "serve -s build -p 3000",
+    "mock-server": "json-server --watch api/mock/db.json -c config/json-server.json",
+    "test": "cypress run --component",
+    "test:e2e": "cypress run",
+    "storybook": "start-storybook -p 3002 -s public -c config/.storybook"
   },
   "eslintConfig": {
     "extends": [
