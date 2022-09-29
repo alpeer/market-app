@@ -22,6 +22,7 @@ This application has been created as an assignment for internship purpose.
 You can install and run dev environment by executing following commands
 ```bash
 npm install
+npm run build:app
 npm start
 ```
 ### Mock data
@@ -36,8 +37,8 @@ npm run mock-server
 ### Folder Structure
 
 - [app](https://github.com/alpeer/market-app/tree/master/src/app) folder has backbone of application, main layout, store and reducers are here. react router should also implemented here in the future.
+- [assets](https://github.com/alpeer/market-app/tree/master/src/assets) should have static files(fonts, images, etc.) imported by ES6 environment.
 - [components](https://github.com/alpeer/market-app/tree/master/src/components) folder has UI components separated by folder with their names. These folders contain styles, stories, unit tests for each component.
-- [pages](https://github.com/alpeer/market-app/tree/master/src/pages) folder seems unnecessary for now since we have only one page. Nevertheless we may have new pages in the future.
 - [pages](https://github.com/alpeer/market-app/tree/master/src/pages) folder seems unnecessary for now since we have only one page. Nevertheless we may have new pages in the future.
 - [utils](https://github.com/alpeer/market-app/tree/master/src/utils) folder should have generic utils that can be used project-wide.
 ## Tests
@@ -75,7 +76,7 @@ npm run test:e2e
 Project should be builded by running the following commands:
 ```bash
 npm run ci
-npm run build
+npm run build:app
 npm run build:docs
 npm run build:storybook
 ```

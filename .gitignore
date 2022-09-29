@@ -25,3 +25,5 @@ yarn-error.log*
 .vercel
 
 build
+cypress/videos
+cypress/screenshots

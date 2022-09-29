@@ -37,9 +37,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:app && npm run build:docs && npm run build:storybook",
     "build:docs": "jsdoc -c config/jsdoc.conf.json -d build/definitions",
     "build:storybook": "build-storybook -s public -c config/.storybook -o build/docs",
+    "build:app": "react-scripts build",
     "serve": "serve -s build -p 3000",
     "mock-server": "json-server --watch api/mock/db.json -c config/json-server.json",
     "test": "cypress run --component",
