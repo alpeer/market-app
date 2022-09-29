@@ -9,7 +9,7 @@ export const paginationState = {
   gridPagination: {
     page: 1,
     count: 1,
-    data: []
+    data: Array(config.UI.defaultPageSize).fill(1).map((_, id) => ({ id }))
   }
 }
 export const getPagination = ({ gridView: { data: list }, data }, page = 1) => (

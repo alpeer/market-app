@@ -1,3 +1,4 @@
+import productImagePlaceholder from "./assets/product_sample.png"
 export default {
   API: {
     baseUrl: process.env.NODE_ENV === "production"
@@ -5,7 +6,7 @@ export default {
       : "http://localhost:3001/"
   },
   UI: {
-    "defaultPageSize": 16,
-    "productImagePlaceholder": "https://placehold.co/92"
+    defaultPageSize: 16,
+    productImagePlaceholder
   }
 }

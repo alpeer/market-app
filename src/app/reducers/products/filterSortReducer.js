@@ -11,12 +11,12 @@ export default (state, { payload: { field, value } }) => {
 export const filterSortState = {
   options: {
     tags: [],
-    itemTypes: []
+    itemTypes: ["mug", "shirt"] // just an estimation will be overwritten
   },
   gridState: {
     sort: Object.keys(ProductSortOptions)[0],
     tags: [],
-    itemType: null,
+    itemType: "mug", // just an estimation will be overwritten
     brands: [],
   },
 }
