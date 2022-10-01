@@ -10,7 +10,7 @@ import "./Price.css"
  * @description Price
  * @param {IPriceProps}
  */
-export const Price = ({ className, value, ...props }) => {
+export const Price = ({ className, value = 0, ...props }) => {
   const formattedValue = useMemo(() =>
     !value && value !== 0
       ? ""
