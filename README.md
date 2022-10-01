@@ -99,6 +99,8 @@ API service of mock data is available thanks to [Vercel Functions](https://marke
 - Output has published on [Vercel](https://market-app-x6dr-h72lkgc5e-alper.vercel.app/definitions/global.html)
 
 ## Lighthouse Audit
-![Lighthouse audit](https://user-images.githubusercontent.com/17167342/193024361-67bed3ce-943d-45c0-9618-b1b1ce60fee2.png)
+![Lighthouse audit](https://user-images.githubusercontent.com/17167342/193416077-5b6befa4-9fc1-4e04-9058-2c162dc9f768.png)
 
-Over 90% achieved on all categories You can [view full audit here](https://raw.githubusercontent.com/alpeer/market-app/master/audit.pdf)
+100%  score achieved on all categories(except Accesibility) of Lighthouse. You can [view full audit here](https://raw.githubusercontent.com/alpeer/market-app/master/audit.pdf)
+
+Accessibility score can only be increased by changing colors of UI design(current design on .fig file negatively impacts)
