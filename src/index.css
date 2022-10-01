@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   background: #FAFAFA;
+  overflow: scroll;
 }
 
 

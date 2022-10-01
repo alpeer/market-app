@@ -1,10 +1,11 @@
 const etag = require('etag')
 const companies = require("./mock/companies.json")
-const ETag = etag(JSON.stringify(companies))
+const ETag = `W/${etag(JSON.stringify(companies))}`
 
 module.exports = (req, res) => {
-  if (req.headers.etag === ETag) {
+  if (req.headers["if-none-match"] === ETag) {
     res.status(304).send()
+    return
   } else {
     res.setHeader('ETag', ETag)
       .status(200)

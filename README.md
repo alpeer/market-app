@@ -97,3 +97,8 @@ API service of mock data is available thanks to [Vercel Functions](https://marke
 - JSDoc has been used as documentation tool.
 - Inline prop definitions are available on component code(.jsx) files
 - Output has published on [Vercel](https://market-app-x6dr-h72lkgc5e-alper.vercel.app/definitions/global.html)
+
+## Lighthouse Audit
+![Lighthouse audit](https://user-images.githubusercontent.com/17167342/193024361-67bed3ce-943d-45c0-9618-b1b1ce60fee2.png)
+
+Over 90% achieved on all categories You can [view full audit here](https://raw.githubusercontent.com/alpeer/market-app/master/audit.pdf)
